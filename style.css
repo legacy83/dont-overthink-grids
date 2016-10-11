@@ -8,14 +8,25 @@
 
 /* == GRID =================================== */
 
+.grid {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+
+.grid:before,
 .grid:after {
-    content: "";
+    content: " ";
     display: table;
+}
+
+.grid:after {
     clear: both;
 }
 
 .grid .grid__cell {
     float: left;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
 }
 
 .grid--2cols .grid__cell {
