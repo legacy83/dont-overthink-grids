@@ -14,70 +14,30 @@
     clear: both;
 }
 
-.grid .col {
+.grid .grid__cell {
     float: left;
 }
 
-.two.cols .col {
+.grid--2cols .grid__cell {
     width: 50%;
 }
 
-.two.cols.main-left .col,
-.two.cols.main-right .col {
+.grid--2cols-left .grid__cell,
+.grid--2cols-right .grid__cell {
     width: 40%;
 }
 
-.two.cols.main-left .col:nth-child(odd),
-.two.cols.main-right .col:nth-child(even) {
+.grid--2cols-left .grid__cell:nth-child(odd),
+.grid--2cols-right .grid__cell:nth-child(even) {
     width: 60%;
 }
 
-.three.cols .col {
+.grid--3cols .grid__cell {
     width: 33.333333333%;
 }
 
-.four.cols .col {
+.grid--4cols .grid__cell {
     width: 25%;
-}
-
-/* == GRID =================================== */
-
-.grid:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-[class*='col-'] {
-    float: left;
-}
-
-.col-1-2 {
-    width: 50%;
-}
-
-.col-1-3 {
-    width: 33.333333333%;
-}
-
-.col-2-3 {
-    width: 66.666666666%;
-}
-
-.col-1-4 {
-    width: 25%;
-}
-
-.col-1-5 {
-    width: 20%;
-}
-
-.col-2-5 {
-    width: 40%;
-}
-
-.col-3-5 {
-    width: 60%;
 }
 
 /* == CONTENT =================================== */
@@ -114,10 +74,6 @@ h1 em, h2 em {
     padding: 20px;
 }
 
-.grid [class*='col-']:nth-child(even) .module {
-    background-color: #e3e3e3;
-}
-
-.grid .col:nth-child(even) .module {
+.grid .grid__cell:nth-child(even) .module {
     background-color: #e3e3e3;
 }
