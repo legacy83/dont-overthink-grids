@@ -1,4 +1,6 @@
-/* == RESET =================================== */
+/*--------------------------------------------------------------
+# Reset
+--------------------------------------------------------------*/
 
 * {
     -moz-box-sizing: border-box;
@@ -6,11 +8,13 @@
     box-sizing: border-box;
 }
 
-/* == GRID =================================== */
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
 
 .grid {
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 .grid:before,
@@ -24,34 +28,49 @@
 }
 
 .grid .grid__cell {
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
 }
 
-.grid--2cols .grid__cell {
-    width: 50%;
+@media (min-width: 768px) {
+    .grid--2cols .grid__cell {
+        float: left;
+        width: 50%;
+    }
 }
 
-.grid--2cols-left .grid__cell,
-.grid--2cols-right .grid__cell {
-    width: 40%;
+@media (min-width: 768px) {
+    .grid--3cols .grid__cell {
+        float: left;
+        width: 33.333333333%;
+    }
 }
 
-.grid--2cols-left .grid__cell:nth-child(odd),
-.grid--2cols-right .grid__cell:nth-child(even) {
-    width: 60%;
+@media (min-width: 768px) {
+    .grid--4cols .grid__cell {
+        float: left;
+        width: 25%;
+    }
 }
 
-.grid--3cols .grid__cell {
-    width: 33.333333333%;
+@media (min-width: 768px) {
+    .grid--2cols-left .grid__cell,
+    .grid--2cols-right .grid__cell {
+        float: left;
+        width: 40%;
+    }
+
+    .grid--2cols-left .grid__cell:nth-child(odd),
+    .grid--2cols-right .grid__cell:nth-child(even) {
+        width: 60%;
+    }
 }
 
-.grid--4cols .grid__cell {
-    width: 25%;
-}
-
-/* == CONTENT =================================== */
+/*--------------------------------------------------------------
+# Site
+--------------------------------------------------------------*/
 
 body {
     border: 20px solid #f3f3f3;
@@ -78,7 +97,9 @@ h1 em, h2 em {
     font-size: 16px;
 }
 
-/* == MODULE =================================== */
+/*--------------------------------------------------------------
+# Module
+--------------------------------------------------------------*/
 
 .module {
     background-color: #f3f3f3;
